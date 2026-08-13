@@ -23,7 +23,7 @@ Bronze Quarry
 > Location based replacement for Steam Quarry, must find ore deposit structures on the surface and place the quarry on top to extract ore\
 > Ore deposits and their outputs are based on 1.0 ore veins
 
-Modern Dynamics pipes now use MI pipe recipes, MI pipes are made with MI pipes + electronic circuits
+Modern Dynamics pipes now use MI pipe recipes, MI pipes are made with MD pipes + electronic circuits
 
 Precision Mechanism now requires substantial Create infrastructure to automate
 
