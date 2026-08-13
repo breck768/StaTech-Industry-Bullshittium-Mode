@@ -24,6 +24,7 @@ precision mechanism is harder and is required for analog circuits
 
 enemy raids every 3 nights with buffed mobs courtesy of a few mods\
 > absolutely no clue how balanced or fun this is in either direction
+void dim has been shot as to not allow you to ignore this
 
 # Priority List:
 bullshittium processing\
@@ -36,9 +37,6 @@ diversify power\
 
 forced replicatorless\
 > creative items can be turned into tokens or something\
-
-## Playtest Todo List:
-prrrrobably shoot or heavily gate void dim\
 
 ## General TODO:
 more fusion stuff\
@@ -53,8 +51,6 @@ YAI fluid intake stuff if main doesn't do anything with it\
 iridium processing (also if main doesnt do anything with it)\
 
 ## circuit junk:
-analog circuits should def be majorly create but not so much so that it cant scale with endgame requirements\
-
 silicon doping should be expanded\
 require polyethylene for electronic circuits (this is fucking evil)\
 not currently possible but a non distillery way of getting ethanol or some existing gt route could make it work\
