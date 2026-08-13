@@ -4,7 +4,7 @@
 me
 
 # Features:
-Extensive early game Create requirements\
+Extensive early game Create requirements
 
 Tiered crafting tree for armor and tools, starting with Steel/Diamond armor and tools, ending with Quantum Nano set and Ultimate Laser Drill
 
