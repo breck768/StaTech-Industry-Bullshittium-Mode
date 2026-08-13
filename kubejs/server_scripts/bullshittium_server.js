@@ -1324,6 +1324,8 @@ ServerEvents.recipes(event => { // this probably isnt destructive
 
     // -- BRONZE QUARRY RECIPES -- //
 
+    event.remove({ id: 'javd:portal_block' })
+
     bronzeQuarry(
         event,
         'statech:bullshittium/bronze_quarry/bauxite_vein',
