@@ -1,6 +1,30 @@
 // priority: -10000000
 // Hello, you have reached Script Hell
 
+/*
+this is kinda the main workspace for this so everything is explained and kept track of here
+all the scripts here either do stuff or overwrite existing stuff (works because of the first priority comment line)
+
+bullshittium stuff outside of this file:
+
+fancymenu stuff (handled by mode switcher)
+basically any startup script stuff (bullshittium_startup.js)
+textures (placed in kubejs\assets\kubejs\textures\block or item)
+mods (i havent touched the pakku stuff yet so this is just done locally lol)
+
+mods added:
+atlas lib (some dependancy)
+enhanced ai (better mob stuff)
+improved mods (most of this was disabled i think or maybe not we'll see)
+insane lib (some dependancy)
+kubejs create (literally could not figure out how to do sequenced assembly recipes without it)
+    pressing and crushing recipes still use raw json helpers, mixer recipes use kubejs create methods
+tenshilib (some dependancy)
+the hordes (better mob stuff)
+
+pack mode switcher works but im only going to bother with getting it set up properly when/if i release this
+
+*/
 let bronzeQuarry = (
     event,
     id,
@@ -1776,11 +1800,3 @@ ServerEvents.recipes(event => { // this probably isnt destructive
     .loops(3)
 
 }) 
-
-// bullshittium stuff outside of this file:
-/*
-ui stuff (handled by mode switcher)
-quantum armor wraps (handled by bullshittium_startup.js)
-everlasting beef/steak healing 0 hunger (also startup script)
-bronze quarry init stuff (startup)
-*/
