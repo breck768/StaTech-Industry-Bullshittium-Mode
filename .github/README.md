@@ -11,7 +11,7 @@ Tiered crafting tree for armor and tools, starting with Steel/Diamond armor and 
 Pre-1.1 Worldshaper recipe (~65k singularities)
 
 Food is now a required challenge
-> Everlasting Beef/Eternal Steak are unobtainable (i think)
+> Everlasting Beef/Eternal Steak are unobtainable (i think)\
 > Auto Feeding Backpack Upgrade is unobtainable (also i think)
 
 AE2 is now gated by Stainless Steel/Digital Circuits
@@ -20,7 +20,7 @@ Fireclay Bricks use GT recipe
 > Concrete uses normal recipe in Create mixer
 
 Bronze Quarry
-> Location based replacement for Steam Quarry, must find ore deposit structures on the surface and place the quarry on top to extract ore
+> Location based replacement for Steam Quarry, must find ore deposit structures on the surface and place the quarry on top to extract ore\
 > Ore deposits and their outputs are based on 1.0 ore veins
 
 Modern Dynamics pipes now use MI pipe recipes, MI pipes are made with MI pipes + electronic circuits
