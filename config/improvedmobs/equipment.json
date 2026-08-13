@@ -1,0 +1,1550 @@
+{
+  "version": 2,
+  "__comment": [
+    "Mobs will be able to equip items declared here",
+    "Value is the item. It also accepts item components. The default config has an example with a harming potion",
+    "Weight is the weight of an item. Higher weight means that the item is more likely to get choosen",
+    "Quality is a modifier applied to the weight. The final weight used is weight + quality * current difficulty"
+  ],
+  "MAINHAND": [
+    {
+      "value": "ae2:certus_quartz_axe",
+      "weight": 4141,
+      "quality": 13.428802
+    },
+    {
+      "value": "ae2:certus_quartz_sword",
+      "weight": 12044,
+      "quality": 9.385564
+    },
+    {
+      "value": "ae2:fluix_axe",
+      "weight": 3569,
+      "quality": 13.7494135
+    },
+    {
+      "value": "ae2:fluix_sword",
+      "weight": 9574,
+      "quality": 10.5717745
+    },
+    {
+      "value": "ae2:nether_quartz_axe",
+      "weight": 4141,
+      "quality": 13.428802
+    },
+    {
+      "value": "ae2:nether_quartz_sword",
+      "weight": 12044,
+      "quality": 9.385564
+    },
+    {
+      "value": "cognition:cognitive_axe",
+      "weight": 2987,
+      "quality": 14.07997
+    },
+    {
+      "value": "cognition:cognitive_rod",
+      "weight": 14363,
+      "quality": 8.336156
+    },
+    {
+      "value": "cognition:cognitive_sword",
+      "weight": 7605,
+      "quality": 11.567871
+    },
+    {
+      "value": "create:cardboard_sword",
+      "weight": 11509,
+      "quality": 9.636435
+    },
+    {
+      "value": "kubejs:bronze_axe",
+      "weight": 4091,
+      "quality": 13.457082
+    },
+    {
+      "value": "kubejs:bronze_sword",
+      "weight": 11625,
+      "quality": 9.581882
+    },
+    {
+      "value": "kubejs:steel_axe",
+      "weight": 3399,
+      "quality": 13.84585
+    },
+    {
+      "value": "kubejs:steel_sword",
+      "weight": 8767,
+      "quality": 10.974547
+    },
+    {
+      "value": "minecraft:crossbow",
+      "weight": 15880,
+      "quality": 7.6831255
+    },
+    {
+      "value": "minecraft:diamond_axe",
+      "weight": 3922,
+      "quality": 13.5513315
+    },
+    {
+      "value": "minecraft:diamond_sword",
+      "weight": 7372,
+      "quality": 11.688764
+    },
+    {
+      "value": "minecraft:enchanted_book",
+      "weight": 12235,
+      "quality": 9.2967005
+    },
+    {
+      "value": "minecraft:ender_pearl",
+      "weight": 12891,
+      "quality": 8.995066
+    },
+    {
+      "value": "minecraft:fishing_rod",
+      "weight": 22056,
+      "quality": 5.3004446
+    },
+    {
+      "value": "minecraft:flint_and_steel",
+      "weight": 24401,
+      "quality": 4.51109
+    },
+    {
+      "value": "minecraft:golden_axe",
+      "weight": 8473,
+      "quality": 11.123196
+    },
+    {
+      "value": "minecraft:golden_sword",
+      "weight": 30707,
+      "quality": 2.7041042
+    },
+    {
+      "value": "minecraft:iron_axe",
+      "weight": 45756,
+      "quality": 0.25
+    },
+    {
+      "value": "minecraft:iron_sword",
+      "weight": 45756,
+      "quality": 0.25
+    },
+    {
+      "value": "minecraft:lava_bucket",
+      "weight": 10615,
+      "quality": 10.063161
+    },
+    {
+      "value": "minecraft:netherite_axe",
+      "weight": 2907,
+      "quality": 14.125499
+    },
+    {
+      "value": "minecraft:netherite_sword",
+      "weight": 5186,
+      "quality": 12.853017
+    },
+    {
+      "value": "minecraft:stone_axe",
+      "weight": 4245,
+      "quality": 13.371177
+    },
+    {
+      "value": "minecraft:stone_sword",
+      "weight": 20285,
+      "quality": 5.938687
+    },
+    {
+      "value": "minecraft:trident",
+      "weight": 3861,
+      "quality": 13.585479
+    },
+    {
+      "value": "minecraft:wooden_axe",
+      "weight": 8521,
+      "quality": 11.098846
+    },
+    {
+      "value": "minecraft:wooden_sword",
+      "weight": 31347,
+      "quality": 2.546319
+    },
+    {
+      "value": "spectrum:bedrock_axe",
+      "weight": 1068,
+      "quality": 15.196421
+    },
+    {
+      "value": "spectrum:bedrock_crossbow",
+      "weight": 8079,
+      "quality": 11.323905
+    },
+    {
+      "value": "spectrum:bedrock_fishing_rod",
+      "weight": 9908,
+      "quality": 10.40702
+    },
+    {
+      "value": "spectrum:bedrock_sword",
+      "weight": 1208,
+      "quality": 15.113352
+    },
+    {
+      "value": "spectrum:draconic_twinsword",
+      "weight": 15314,
+      "quality": 7.923707
+    },
+    {
+      "value": "spectrum:dragon_talon",
+      "weight": 13917,
+      "quality": 8.532936
+    },
+    {
+      "value": "spectrum:dreamflayer",
+      "weight": 11016,
+      "quality": 9.870799
+    },
+    {
+      "value": "spectrum:ferocious_glass_crest_bident",
+      "weight": 2126,
+      "quality": 14.57573
+    },
+    {
+      "value": "spectrum:fractal_glass_crest_bident",
+      "weight": 5065,
+      "quality": 12.918845
+    },
+    {
+      "value": "spectrum:glass_crest_crossbow",
+      "weight": 10163,
+      "quality": 10.282493
+    },
+    {
+      "value": "spectrum:glass_crest_ultra_greatsword",
+      "weight": 2217,
+      "quality": 14.522429
+    },
+    {
+      "value": "spectrum:knotted_sword",
+      "weight": 8648,
+      "quality": 11.034352
+    },
+    {
+      "value": "spectrum:lagoon_rod",
+      "weight": 19869,
+      "quality": 6.0937223
+    },
+    {
+      "value": "spectrum:malachite_bident",
+      "weight": 2722,
+      "quality": 14.231753
+    },
+    {
+      "value": "spectrum:malachite_crossbow",
+      "weight": 13523,
+      "quality": 8.709063
+    },
+    {
+      "value": "spectrum:malachite_ultra_greatsword",
+      "weight": 2489,
+      "quality": 14.365244
+    },
+    {
+      "value": "spectrum:molten_rod",
+      "weight": 19869,
+      "quality": 6.0937223
+    },
+    {
+      "value": "spectrum:nectar_lance",
+      "weight": 2712,
+      "quality": 14.237246
+    },
+    {
+      "value": "spectrum:razor_falchion",
+      "weight": 8811,
+      "quality": 10.952552
+    },
+    {
+      "value": "wstweaks:immolation_blade",
+      "weight": 2432,
+      "quality": 14.398349
+    }
+  ],
+  "OFFHAND": [
+    {
+      "value": "cognition:cognitive_bow",
+      "weight": 804,
+      "quality": 3.1275837
+    },
+    {
+      "value": "minecraft:bow",
+      "weight": 886,
+      "quality": 2.9137738
+    },
+    {
+      "value": {
+        "id": "minecraft:lingering_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:harming"
+          }
+        }
+      },
+      "weight": 900,
+      "quality": 2.8789887
+    },
+    {
+      "value": "minecraft:shield",
+      "weight": 914,
+      "quality": 2.8421354
+    },
+    {
+      "value": "minecraft:snowball",
+      "weight": 2490,
+      "quality": 0.25
+    },
+    {
+      "value": {
+        "id": "minecraft:splash_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:harming"
+          }
+        }
+      },
+      "weight": 900,
+      "quality": 2.8789887
+    },
+    {
+      "value": "minecraft:tnt",
+      "weight": 622,
+      "quality": 3.6324363
+    },
+    {
+      "value": "spectrum:bedrock_bow",
+      "weight": 435,
+      "quality": 4.1884346
+    }
+  ],
+  "FEET": [
+    {
+      "value": "cognition:cognitive_boots",
+      "weight": 3100,
+      "quality": 75.07122
+    },
+    {
+      "value": "create:cardboard_boots",
+      "weight": 8995,
+      "quality": 62.570564
+    },
+    {
+      "value": "create:copper_diving_boots",
+      "weight": 7827,
+      "quality": 64.95634
+    },
+    {
+      "value": "create:netherite_diving_boots",
+      "weight": 1213,
+      "quality": 79.31271
+    },
+    {
+      "value": "extended_industrialization:nano_boots",
+      "weight": 66913,
+      "quality": 0.25
+    },
+    {
+      "value": "extended_industrialization:nano_quantum_boots",
+      "weight": 66913,
+      "quality": 0.25
+    },
+    {
+      "value": "kubejs:bronze_boots",
+      "weight": 3354,
+      "quality": 74.509346
+    },
+    {
+      "value": "kubejs:steel_boots",
+      "weight": 2967,
+      "quality": 75.36516
+    },
+    {
+      "value": "minecraft:chainmail_boots",
+      "weight": 5385,
+      "quality": 70.09147
+    },
+    {
+      "value": "minecraft:diamond_boots",
+      "weight": 1343,
+      "quality": 79.01658
+    },
+    {
+      "value": "minecraft:golden_boots",
+      "weight": 5211,
+      "quality": 70.464424
+    },
+    {
+      "value": "minecraft:iron_boots",
+      "weight": 2987,
+      "quality": 75.32209
+    },
+    {
+      "value": "minecraft:leather_boots",
+      "weight": 6036,
+      "quality": 68.702515
+    },
+    {
+      "value": "minecraft:netherite_boots",
+      "weight": 1213,
+      "quality": 79.31271
+    },
+    {
+      "value": "modern_industrialization:quantum_boots",
+      "weight": 66913,
+      "quality": 0.25
+    },
+    {
+      "value": "modern_industrialization:rubber_boots",
+      "weight": 5764,
+      "quality": 69.28198
+    },
+    {
+      "value": "spectrum:bedrock_boots",
+      "weight": 236,
+      "quality": 81.55516
+    },
+    {
+      "value": "spectrum:oread_boots",
+      "weight": 1068,
+      "quality": 79.643
+    },
+    {
+      "value": "usefulslime:slime_boots",
+      "weight": 7182,
+      "quality": 66.294235
+    }
+  ],
+  "LEGS": [
+    {
+      "value": "cognition:cognitive_leggings",
+      "weight": 1451,
+      "quality": 4755.7183
+    },
+    {
+      "value": "create:cardboard_leggings",
+      "weight": 31104,
+      "quality": 3634.8953
+    },
+    {
+      "value": "extended_industrialization:nano_leggings",
+      "weight": 235559,
+      "quality": 0.25
+    },
+    {
+      "value": "extended_industrialization:nano_quantum_leggings",
+      "weight": 235559,
+      "quality": 0.25
+    },
+    {
+      "value": "kubejs:bronze_leggings",
+      "weight": 2256,
+      "quality": 4723.333
+    },
+    {
+      "value": "kubejs:steel_leggings",
+      "weight": 2199,
+      "quality": 4725.615
+    },
+    {
+      "value": "minecraft:chainmail_leggings",
+      "weight": 3090,
+      "quality": 4689.8765
+    },
+    {
+      "value": "minecraft:diamond_leggings",
+      "weight": 1190,
+      "quality": 4766.2637
+    },
+    {
+      "value": "minecraft:golden_leggings",
+      "weight": 5367,
+      "quality": 4599.099
+    },
+    {
+      "value": "minecraft:iron_leggings",
+      "weight": 1904,
+      "quality": 4737.499
+    },
+    {
+      "value": "minecraft:leather_leggings",
+      "weight": 10743,
+      "quality": 4388.338
+    },
+    {
+      "value": "minecraft:netherite_leggings",
+      "weight": 1159,
+      "quality": 4767.532
+    },
+    {
+      "value": "modern_industrialization:quantum_leggings",
+      "weight": 235559,
+      "quality": 0.25
+    },
+    {
+      "value": "spectrum:bedrock_leggings",
+      "weight": 207,
+      "quality": 4806.0464
+    },
+    {
+      "value": "spectrum:sylph_leggings",
+      "weight": 2280,
+      "quality": 4722.3706
+    },
+    {
+      "value": "usefulslime:slime_leggings",
+      "weight": 3772,
+      "quality": 4662.5864
+    }
+  ],
+  "CHEST": [
+    {
+      "value": "cognition:cognitive_chestplate",
+      "weight": 2221,
+      "quality": 4719.398
+    },
+    {
+      "value": "create:cardboard_chestplate",
+      "weight": 68711,
+      "quality": 3601.9873
+    },
+    {
+      "value": "create:copper_backtank",
+      "weight": 7826,
+      "quality": 4619.3735
+    },
+    {
+      "value": "create:netherite_backtank",
+      "weight": 1289,
+      "quality": 4736.1274
+    },
+    {
+      "value": "extended_industrialization:nano_chestplate",
+      "weight": 524551,
+      "quality": 0.25
+    },
+    {
+      "value": "extended_industrialization:nano_gravichestplate",
+      "weight": 524551,
+      "quality": 0.25
+    },
+    {
+      "value": "extended_industrialization:nano_quantum_chestplate",
+      "weight": 524551,
+      "quality": 0.25
+    },
+    {
+      "value": "kubejs:bronze_chestplate",
+      "weight": 3275,
+      "quality": 4700.508
+    },
+    {
+      "value": "kubejs:steel_chestplate",
+      "weight": 2218,
+      "quality": 4719.4526
+    },
+    {
+      "value": "minecraft:chainmail_chestplate",
+      "weight": 4210,
+      "quality": 4683.785
+    },
+    {
+      "value": "minecraft:diamond_chestplate",
+      "weight": 1313,
+      "quality": 4735.6885
+    },
+    {
+      "value": "minecraft:elytra",
+      "weight": 91130,
+      "quality": 3259.2114
+    },
+    {
+      "value": "minecraft:golden_chestplate",
+      "weight": 4201,
+      "quality": 4683.9473
+    },
+    {
+      "value": "minecraft:iron_chestplate",
+      "weight": 2751,
+      "quality": 4709.883
+    },
+    {
+      "value": "minecraft:leather_chestplate",
+      "weight": 12435,
+      "quality": 4537.937
+    },
+    {
+      "value": "minecraft:netherite_chestplate",
+      "weight": 1296,
+      "quality": 4736.0015
+    },
+    {
+      "value": "modern_industrialization:diesel_jetpack",
+      "weight": 524551,
+      "quality": 0.25
+    },
+    {
+      "value": "modern_industrialization:gravichestplate",
+      "weight": 524551,
+      "quality": 0.25
+    },
+    {
+      "value": "modern_industrialization:quantum_chestplate",
+      "weight": 524551,
+      "quality": 0.25
+    },
+    {
+      "value": "nomansland:tortoise_shell",
+      "weight": 7144,
+      "quality": 4631.4937
+    },
+    {
+      "value": "spectrum:bedrock_chestplate",
+      "weight": 216,
+      "quality": 4755.4194
+    },
+    {
+      "value": "spectrum:ferocious_chestplate",
+      "weight": 2256,
+      "quality": 4718.757
+    },
+    {
+      "value": "usefulslime:slime_chestplate",
+      "weight": 5106,
+      "quality": 4667.779
+    }
+  ],
+  "HEAD": [
+    {
+      "value": "cognition:cognitive_helmet",
+      "weight": 3245,
+      "quality": 1.32112
+    },
+    {
+      "value": "create:cardboard_helmet",
+      "weight": 17180,
+      "quality": 1.1561644
+    },
+    {
+      "value": "create:copper_diving_helmet",
+      "weight": 7266,
+      "quality": 1.2723967
+    },
+    {
+      "value": "create:goggles",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "create:netherite_diving_helmet",
+      "weight": 2294,
+      "quality": 1.3327813
+    },
+    {
+      "value": "extended_industrialization:nano_helmet",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "extended_industrialization:nano_quantum_helmet",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "kubejs:bronze_helmet",
+      "weight": 6369,
+      "quality": 1.2831799
+    },
+    {
+      "value": "kubejs:steel_helmet",
+      "weight": 3217,
+      "quality": 1.3214679
+    },
+    {
+      "value": "minecraft:chainmail_helmet",
+      "weight": 5506,
+      "quality": 1.2936119
+    },
+    {
+      "value": "minecraft:diamond_helmet",
+      "weight": 2541,
+      "quality": 1.3297441
+    },
+    {
+      "value": "minecraft:golden_helmet",
+      "weight": 5382,
+      "quality": 1.295113
+    },
+    {
+      "value": "minecraft:iron_helmet",
+      "weight": 5676,
+      "quality": 1.2915506
+    },
+    {
+      "value": "minecraft:leather_helmet",
+      "weight": 11505,
+      "quality": 1.2220192
+    },
+    {
+      "value": "minecraft:netherite_helmet",
+      "weight": 2294,
+      "quality": 1.3327813
+    },
+    {
+      "value": "minecraft:shulker_shell",
+      "weight": 52687,
+      "quality": 0.7855716
+    },
+    {
+      "value": "minecraft:turtle_helmet",
+      "weight": 5351,
+      "quality": 1.2954866
+    },
+    {
+      "value": "modern_industrialization:quantum_helmet",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "modern_industrialization:rubber_helmet",
+      "weight": 10792,
+      "quality": 1.2304214
+    },
+    {
+      "value": "nomansland:ancient_bronze_mask",
+      "weight": 2856,
+      "quality": 1.3258803
+    },
+    {
+      "value": "simplylight:edge_light",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:edge_light_black",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:edge_light_blue",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:edge_light_brown",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:edge_light_cyan",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:edge_light_gray",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:edge_light_green",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:edge_light_light_blue",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:edge_light_light_gray",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:edge_light_lime",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:edge_light_magenta",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:edge_light_orange",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:edge_light_pink",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:edge_light_purple",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:edge_light_red",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:edge_light_top",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:edge_light_top_black",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:edge_light_top_blue",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:edge_light_top_brown",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:edge_light_top_cyan",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:edge_light_top_gray",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:edge_light_top_green",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:edge_light_top_light_blue",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:edge_light_top_light_gray",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:edge_light_top_lime",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:edge_light_top_magenta",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:edge_light_top_orange",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:edge_light_top_pink",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:edge_light_top_purple",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:edge_light_top_red",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:edge_light_top_yellow",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:edge_light_yellow",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_black_block",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_black_block_on",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_block",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_block_on",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_blue_block",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_blue_block_on",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_brown_block",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_brown_block_on",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_cyan_block",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_cyan_block_on",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_gray_block",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_gray_block_on",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_green_block",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_green_block_on",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_light_blue_block",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_light_blue_block_on",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_light_gray_block",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_light_gray_block_on",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_lime_block",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_lime_block_on",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_magenta_block",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_magenta_block_on",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_orange_block",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_orange_block_on",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_panel",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_panel_black",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_panel_blue",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_panel_brown",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_panel_cyan",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_panel_gray",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_panel_green",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_panel_light_blue",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_panel_light_gray",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_panel_lime",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_panel_magenta",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_panel_orange",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_panel_pink",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_panel_purple",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_panel_red",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_panel_yellow",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_pink_block",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_pink_block_on",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_purple_block",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_purple_block_on",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_red_block",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_red_block_on",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_slab",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_slab_black",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_slab_blue",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_slab_brown",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_slab_cyan",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_slab_gray",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_slab_green",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_slab_light_blue",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_slab_light_gray",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_slab_lime",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_slab_magenta",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_slab_orange",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_slab_pink",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_slab_purple",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_slab_red",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_slab_yellow",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_yellow_block",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:illuminant_yellow_block_on",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:lamp_post",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:lamp_post_black",
+      "weight": 5808,
+      "quality": 1.2899601
+    },
+    {
+      "value": "simplylight:lamp_post_blue",
+      "weight": 5808,
+      "quality": 1.2899601
+    },
+    {
+      "value": "simplylight:lamp_post_brown",
+      "weight": 5808,
+      "quality": 1.2899601
+    },
+    {
+      "value": "simplylight:lamp_post_cyan",
+      "weight": 5808,
+      "quality": 1.2899601
+    },
+    {
+      "value": "simplylight:lamp_post_gray",
+      "weight": 5808,
+      "quality": 1.2899601
+    },
+    {
+      "value": "simplylight:lamp_post_green",
+      "weight": 5808,
+      "quality": 1.2899601
+    },
+    {
+      "value": "simplylight:lamp_post_light_blue",
+      "weight": 5808,
+      "quality": 1.2899601
+    },
+    {
+      "value": "simplylight:lamp_post_light_gray",
+      "weight": 5808,
+      "quality": 1.2899601
+    },
+    {
+      "value": "simplylight:lamp_post_lime",
+      "weight": 5808,
+      "quality": 1.2899601
+    },
+    {
+      "value": "simplylight:lamp_post_magenta",
+      "weight": 5808,
+      "quality": 1.2899601
+    },
+    {
+      "value": "simplylight:lamp_post_orange",
+      "weight": 5808,
+      "quality": 1.2899601
+    },
+    {
+      "value": "simplylight:lamp_post_pink",
+      "weight": 5808,
+      "quality": 1.2899601
+    },
+    {
+      "value": "simplylight:lamp_post_purple",
+      "weight": 5808,
+      "quality": 1.2899601
+    },
+    {
+      "value": "simplylight:lamp_post_red",
+      "weight": 5808,
+      "quality": 1.2899601
+    },
+    {
+      "value": "simplylight:lamp_post_yellow",
+      "weight": 5808,
+      "quality": 1.2899601
+    },
+    {
+      "value": "simplylight:lightbulb",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:lightbulb_black",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:lightbulb_blue",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:lightbulb_brown",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:lightbulb_cyan",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:lightbulb_gray",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:lightbulb_green",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:lightbulb_light_blue",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:lightbulb_light_gray",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:lightbulb_lime",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:lightbulb_magenta",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:lightbulb_orange",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:lightbulb_pink",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:lightbulb_purple",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:lightbulb_red",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:lightbulb_yellow",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:rodlamp",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:rodlamp_black",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:rodlamp_blue",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:rodlamp_brown",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:rodlamp_cyan",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:rodlamp_gray",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:rodlamp_green",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:rodlamp_light_blue",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:rodlamp_light_gray",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:rodlamp_lime",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:rodlamp_magenta",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:rodlamp_orange",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:rodlamp_pink",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:rodlamp_purple",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:rodlamp_red",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:rodlamp_yellow",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:wall_lamp",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:wall_lamp_black",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:wall_lamp_blue",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:wall_lamp_brown",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:wall_lamp_cyan",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:wall_lamp_gray",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:wall_lamp_green",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:wall_lamp_light_blue",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:wall_lamp_light_gray",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:wall_lamp_lime",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:wall_lamp_magenta",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:wall_lamp_orange",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:wall_lamp_pink",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:wall_lamp_purple",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:wall_lamp_red",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "simplylight:wall_lamp_yellow",
+      "weight": 125291,
+      "quality": 0.25
+    },
+    {
+      "value": "spectrum:bedrock_helmet",
+      "weight": 439,
+      "quality": 1.355661
+    },
+    {
+      "value": "spectrum:fetchling_helmet",
+      "weight": 3517,
+      "quality": 1.3177929
+    },
+    {
+      "value": "usefulslime:slime_helmet",
+      "weight": 6970,
+      "quality": 1.2759494
+    },
+    {
+      "value": "yet_another_industrialization:industrialists_goggles",
+      "weight": 125291,
+      "quality": 0.25
+    }
+  ]
+}
