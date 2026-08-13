@@ -3,33 +3,42 @@
 ## Contributors
 me
 
-# Finished and Implemented:
-extensive early game create requirements\
-tiered armor/tools\
-pre 1.1 worldshaper recipe
-make food a required challenge
-> everlasting beef is dead
-> auto feeding backpack upgrade is dead
+# Features:
+Extensive early game Create requirements\
 
-restore ae2 hv gating (:gregtroll:)\
-sbf has gt recipe
-> concrete uses normal recipe in create mixer
+Tiered crafting tree for armor and tools, starting with Steel/Diamond armor and tools, ending with Quantum Nano set and Ultimate Laser Drill\
 
-bronze quarry
-> uses ore deposit structures that quarry is placed on top of to dictate recipe, consumes iron drills
+Pre-1.1 Worldshaper recipe (~65k singularities)\
 
-md pipes now use mi pipe recipes, mi pipes are md pipes + electronic circuits
-precision mechanism is harder and is required for analog circuits
-> want to use potion stuff at some point
+Food is now a required challenge
+> Everlasting Beef/Eternal Steak are unobtainable (i think)
+> Auto Feeding Backpack Upgrade is unobtainable (also i think)
 
-enemy raids every 3 nights with buffed mobs courtesy of a few mods\
+AE2 is now gated by Stainless Steel/Digital Circuits\
+
+Fireclay Bricks use GT recipe
+> Concrete uses normal recipe in Create mixer
+
+Bronze Quarry
+> Location based replacement for Steam Quarry, must find ore deposit structures on the surface and place the quarry on top to extract ore
+> Ore deposits and their outputs are based on 1.0 ore veins
+
+Modern Dynamics pipes now use MI pipe recipes, MI pipes are made with MI pipes + electronic circuits
+
+Precision Mechanism now requires substantial Create infrastructure to automate
+
+Analog circuits require 4 Precision Mechanisms along with normal requirements 
+
+Mob raids occur every 3 nights with buffed mob AI courtesy of a few mods\
 > absolutely no clue how balanced or fun this is in either direction
-void dim has been shot as to not allow you to ignore this
+Void Dimension is inaccessible 
 
 # Priority List:
 bullshittium processing\
 > i want to straight up include the process in this message but maybe you also get a bullshittium residue fluid at the end that does other stuff\
 > not specifically sure yet on what this would be but maybe something to complicate endgame recipes, such as requiring it for quantum machine casings (like chromium for ev casings)
+
+use potion squirt recipes somehow\
 
 diversify power\
 > i like the gt thing where steam is strictly lv/early mv, might buff benzene and diesel or something idk\
