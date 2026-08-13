@@ -21,6 +21,7 @@ kubejs create (literally could not figure out how to do sequenced assembly recip
     pressing and crushing recipes still use raw json helpers, mixer recipes use kubejs create methods
 tenshilib (some dependancy)
 the hordes (better mob stuff)
+ore deposits (custom mod that generates ore deposits for bronze quarry)
 
 pack mode switcher works but im only going to bother with getting it set up properly when/if i release this
 
