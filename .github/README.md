@@ -7,9 +7,9 @@ me
 extensive early game create requirements\
 tiered armor/tools\
 pre 1.1 worldshaper recipe
-make food a required challenge \
-> everlasting beef is dead\
-> auto feeding backpack upgrade is dead\
+make food a required challenge
+> everlasting beef is dead
+> auto feeding backpack upgrade is dead
 restore ae2 hv gating (:gregtroll:)\
 sbf has gt recipe
 > concrete uses normal recipe in create mixer\
