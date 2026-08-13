@@ -6,15 +6,15 @@ me
 # Features:
 Extensive early game Create requirements\
 
-Tiered crafting tree for armor and tools, starting with Steel/Diamond armor and tools, ending with Quantum Nano set and Ultimate Laser Drill\
+Tiered crafting tree for armor and tools, starting with Steel/Diamond armor and tools, ending with Quantum Nano set and Ultimate Laser Drill
 
-Pre-1.1 Worldshaper recipe (~65k singularities)\
+Pre-1.1 Worldshaper recipe (~65k singularities)
 
 Food is now a required challenge
 > Everlasting Beef/Eternal Steak are unobtainable (i think)
 > Auto Feeding Backpack Upgrade is unobtainable (also i think)
 
-AE2 is now gated by Stainless Steel/Digital Circuits\
+AE2 is now gated by Stainless Steel/Digital Circuits
 
 Fireclay Bricks use GT recipe
 > Concrete uses normal recipe in Create mixer
@@ -29,8 +29,9 @@ Precision Mechanism now requires substantial Create infrastructure to automate
 
 Analog circuits require 4 Precision Mechanisms along with normal requirements 
 
-Mob raids occur every 3 nights with buffed mob AI courtesy of a few mods\
+Mob raids occur every 3 nights with buffed mob AI courtesy of a few mods
 > absolutely no clue how balanced or fun this is in either direction
+
 Void Dimension is inaccessible 
 
 # Priority List:
