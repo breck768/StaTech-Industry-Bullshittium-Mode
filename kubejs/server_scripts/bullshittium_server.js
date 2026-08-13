@@ -1,6 +1,39 @@
 // priority: -10000000
 // Hello, you have reached Script Hell
 
+let bronzeQuarry = (
+    event,
+    id,
+    eu,
+    duration,
+    item_inputs,
+    item_outputs,
+    adjacent_block,
+    adjacent_block_pos
+) => {
+    let process_conditions = [
+        {
+            type: mi('adjacent_block'),
+            block: adjacent_block,
+            position: adjacent_block_pos,
+        },
+    ];
+    event
+        .custom(
+            newMachineRecipe(
+                mi('bronze_quarry'),
+                eu,
+                duration,
+                item_inputs,
+                item_outputs,
+                null,
+                null,
+                process_conditions
+            )
+        )
+        .id(id);
+};
+
 ServerEvents.recipes(event => { // this probably isnt destructive
     let st = (id) => `statech:modern_industrialization/${id}`;
 
@@ -15,7 +48,7 @@ ServerEvents.recipes(event => { // this probably isnt destructive
 
         event.custom(newRecipe).id(id);
     };
-    let mixing = (id, heatRequirement, item_inputs, item_outputs) => {
+    let cr_mixing = (id, heatRequirement, item_inputs, item_outputs) => {
         let newRecipe = {
             type: 'create:mixing',
             heat_requirement: heatRequirement,
@@ -121,47 +154,66 @@ ServerEvents.recipes(event => { // this probably isnt destructive
 
     // -- CONCRETE -- //
 
-    mixing(
-        'statech:modern_industrialization_concrete_create_mixer',
-        'heated',
+    event.recipes.create.mixing(
+        [Fluid.of('modern_industrialization:concrete', 500)],
         [
-            { item: mi('stone_dust') },
-            { item: mi('stone_dust') },
-            { item: mi('stone_dust') },
-            { item: mi('stone_dust') },
-            { item: mi('stone_dust') },
-            { item: mi('stone_dust') },
-            { item: mi('stone_dust') },
-            { item: mi('stone_dust') },
-            { item: mi('stone_dust') },
-            { item: mi('stone_dust') },
-            { item: mi('clay_dust') },
-            { item: mi('clay_dust') },
-            { item: mi('clay_dust') },
-            { item: mi('clay_dust') },
-            {
-                type: "fluid_stack",
-                fluid: "minecraft:water",
-                amount: 100
-            }
-        ],
-        [{ id: mi('concrete'), amount: 500 }],
-    );
+            Item.of('modern_industrialization:stone_dust', 10),
+            Item.of('modern_industrialization:clay_dust', 4),
+            Fluid.of('minecraft:water', 100)
+        ]
+    ).heated() // Heat requirement
+
+    //without kubejs create
+    // mixing(
+    //     'statech:modern_industrialization_concrete_create_mixer',
+    //     'heated',
+    //     [
+    //         { item: mi('stone_dust') },
+    //         { item: mi('stone_dust') },
+    //         { item: mi('stone_dust') },
+    //         { item: mi('stone_dust') },
+    //         { item: mi('stone_dust') },
+    //         { item: mi('stone_dust') },
+    //         { item: mi('stone_dust') },
+    //         { item: mi('stone_dust') },
+    //         { item: mi('stone_dust') },
+    //         { item: mi('stone_dust') },
+    //         { item: mi('clay_dust') },
+    //         { item: mi('clay_dust') },
+    //         { item: mi('clay_dust') },
+    //         { item: mi('clay_dust') },
+    //         {
+    //             type: "fluid_stack",
+    //             fluid: "minecraft:water",
+    //             amount: 100
+    //         }
+    //     ],
+    //     [{ id: mi('concrete'), amount: 500 }],
+    // );
 
     // -- BRONZE INGOT --
 
     event.remove({ id: mi('materials/bronze_dust') })
-    mixing(
-        st('bronze_ingot_create_mixer'),
-        'superheated',
+    event.recipes.create.mixing(
+        ['2x modern_industrialization:bronze_ingot'],
         [
-            { tag: 'c:raw_materials/copper' },
-            { tag: 'c:raw_materials/copper' },
-            { tag: 'c:raw_materials/copper' },
-            { tag: 'c:raw_materials/tin' }
-        ],
-        [{ id: mi('bronze_ingot'), count: 2 }]
-    );
+            '3x minecraft:raw_copper',
+            mi('raw_tin')
+        ]
+    ).superheated()
+
+    //without kubejs create
+    // mixing(
+    //     st('bronze_ingot_create_mixer'),
+    //     'superheated',
+    //     [
+    //         { tag: 'c:raw_materials/copper' },
+    //         { tag: 'c:raw_materials/copper' },
+    //         { tag: 'c:raw_materials/copper' },
+    //         { tag: 'c:raw_materials/tin' }
+    //     ],
+    //     [{ id: mi('bronze_ingot'), count: 2 }]
+    // );
 
     // -- FIRE CLAY BRICKS -- //
 
@@ -448,7 +500,7 @@ ServerEvents.recipes(event => { // this probably isnt destructive
     event.shapeless(('sophisticatedbackpacks:feeding_upgrade'), [
         '1x ' + kj('bartman')
     ])
-    .id('statech:sophisticatedbackpacks/feeding_upgrade');
+        .id('statech:sophisticatedbackpacks/feeding_upgrade');
 
     // -- ENDGAME RECIPES -- //
 
@@ -1192,6 +1244,537 @@ ServerEvents.recipes(event => { // this probably isnt destructive
             { amount: 7889, fluid: mi('hydrogen') }
         ]
     );
+
+    // -- IRON DRILL -- //
+
+    event
+        .shaped('1x ' + kj('iron_drill_head'), ['BCP', 'GRC', 'BGB'], {
+            B: mi('iron_bolt'),
+            C: kj('iron_curved_plate'),
+            P: mi('iron_plate'),
+            G: mi('iron_gear'),
+            R: mi('iron_rod'),
+        })
+        .id(kj('iron_drill_head'));
+
+    assembler(
+        event,
+        'modern_industrialization:materials/iron/assembler/drill_head',
+        8,
+        200,
+        [
+            { amount: 1, item: mi('iron_plate') },
+            { amount: 2, item: kj('iron_curved_plate') },
+            { amount: 1, item: mi('iron_rod') },
+            { amount: 2, item: mi('iron_gear') },
+        ],
+        [{ amount: 1, item: kj('iron_drill_head') }],
+        [
+            { amount: 75, fluid: mi('soldering_alloy') },
+        ]
+    );
+
+    event
+        .shaped('4x ' + kj('iron_drill'), ['  D', 'GI ', 'FG '], {
+            D: kj('iron_drill_head'),
+            F: 'moderndynamics:item_pipe',
+            I: 'moderndynamics:fluid_pipe',
+            G: mi('iron_gear'),
+        })
+        .id(kj('iron_drill'));
+
+    assembler(
+        event,
+        'modern_industrialization:assembler_generated/quarry/drill/iron_drill',
+        8,
+        200,
+        [
+            { amount: 1, item: kj('iron_drill_head') },
+            { amount: 2, item: mi('iron_gear') },
+            { amount: 1, item: 'moderndynamics:item_pipe' },
+            { amount: 1, item: 'moderndynamics:fluid_pipe' },
+        ],
+        [{ amount: 4, item: kj('iron_drill') }],
+    );
+
+    // -- BRONZE QUARRY RECIPES -- //
+
+    bronzeQuarry(
+        event,
+        'statech:bullshittium/bronze_quarry/bauxite_vein',
+        4,
+        1200,
+        [{ amount: 1, item: kj('iron_drill'), probability: 0.04 }],
+        [
+            { amount: 1, item: mi('bauxite_ore'), probability: 0.8 },
+            { amount: 1, item: mc('iron_ore'), probability: 0.2 },
+        ],
+        kj('quarry_bauxite_ore'),
+        'below'
+    );
+
+    bronzeQuarry(
+        event,
+        'statech:bullshittium/bronze_quarry/lignite_vein',
+        4,
+        1200,
+        [{ amount: 1, item: kj('iron_drill'), probability: 0.04 }],
+        [
+            { amount: 1, item: mi('lignite_coal_ore'), probability: 0.5 },
+            { amount: 1, item: mc('coal_ore'), probability: 0.5 },
+        ],
+        kj('quarry_lignite_ore'),
+        'below'
+    );
+
+    bronzeQuarry(
+        event,
+        'statech:bullshittium/bronze_quarry/coal_vein',
+        4,
+        1200,
+        [{ amount: 1, item: kj('iron_drill'), probability: 0.04 }],
+        [
+            { amount: 1, item: mc('coal_ore'), probability: 1 },
+        ],
+        kj('quarry_coal_ore'),
+        'below'
+    );
+
+    bronzeQuarry(
+        event,
+        'statech:bullshittium/bronze_quarry/copper_vein',
+        4,
+        1200,
+        [{ amount: 1, item: kj('iron_drill'), probability: 0.04 }],
+        [
+            { amount: 1, item: mc('copper_ore'), probability: 1 },
+        ],
+        kj('quarry_copper_ore'),
+        'below'
+    );
+
+    bronzeQuarry(
+        event,
+        'statech:bullshittium/bronze_quarry/diamond_vein',
+        4,
+        1200,
+        [{ amount: 1, item: kj('iron_drill'), probability: 0.04 }],
+        [
+            { amount: 1, item: mc('diamond_ore'), probability: 0.7 },
+            { amount: 1, item: mc('coal_ore'), probability: 0.1 },
+            { amount: 1, item: mi('sapphire_ore'), probability: 0.1 },
+            { amount: 1, item: mi('fluorite_ore'), probability: 0.1 },
+        ],
+        kj('quarry_diamond_ore'),
+        'below'
+    );
+
+    bronzeQuarry(
+        event,
+        'statech:bullshittium/bronze_quarry/emerald_vein',
+        4,
+        1200,
+        [{ amount: 1, item: kj('iron_drill'), probability: 0.04 }],
+        [
+            { amount: 1, item: mc('emerald_ore'), probability: 0.8 },
+            { amount: 1, item: mi('fluorite_ore'), probability: 0.2 },
+        ],
+        kj('quarry_emerald_ore'),
+        'below'
+    );
+
+    bronzeQuarry(
+        event,
+        'statech:bullshittium/bronze_quarry/gold_vein',
+        4,
+        1200,
+        [{ amount: 1, item: kj('iron_drill'), probability: 0.04 }],
+        [
+            { amount: 1, item: mc('gold_ore'), probability: 0.8 },
+            { amount: 3, item: mi('raw_silver'), probability: 0.2 },
+        ],
+        kj('quarry_gold_ore'),
+        'below'
+    );
+
+    bronzeQuarry(
+        event,
+        'statech:bullshittium/bronze_quarry/iron_vein',
+        4,
+        1200,
+        [{ amount: 1, item: kj('iron_drill'), probability: 0.04 }],
+        [
+            { amount: 1, item: mc('iron_ore'), probability: 0.8 },
+            { amount: 1, item: mi('nickel_ore'), probability: 0.2 },
+        ],
+        kj('quarry_iron_ore'),
+        'below'
+    );
+
+    bronzeQuarry(
+        event,
+        'statech:bullshittium/bronze_quarry/lapis_vein',
+        4,
+        1200,
+        [{ amount: 1, item: kj('iron_drill'), probability: 0.04 }],
+        [
+            { amount: 1, item: mc('lapis_ore'), probability: 0.9 },
+            { amount: 1, item: mi('fluorite_ore'), probability: 0.1 },
+        ],
+        kj('quarry_lapis_ore'),
+        'below'
+    );
+
+    bronzeQuarry(
+        event,
+        'statech:bullshittium/bronze_quarry/lead_vein',
+        4,
+        1200,
+        [{ amount: 1, item: kj('iron_drill'), probability: 0.04 }],
+        [
+            { amount: 1, item: mi('lead_ore'), probability: 0.65 },
+            { amount: 3, item: mi('raw_silver'), probability: 0.35 },
+        ],
+        kj('quarry_lead_ore'),
+        'below'
+    );
+
+    bronzeQuarry(
+        event,
+        'statech:bullshittium/bronze_quarry/platinum_vein',
+        4,
+        1200,
+        [{ amount: 1, item: kj('iron_drill'), probability: 0.04 }],
+        [
+            { amount: 1, item: mi('platinum_ore'), probability: 0.95 },
+            { amount: 1, item: mi('iridium_ore'), probability: 0.05 },
+        ],
+        kj('quarry_platinum_ore'),
+        'below'
+    );
+
+    bronzeQuarry(
+        event,
+        'statech:bullshittium/bronze_quarry/quartz_vein',
+        4,
+        1200,
+        [{ amount: 1, item: kj('iron_drill'), probability: 0.04 }],
+        [
+            { amount: 1, item: mi('quartz_ore'), probability: 0.80 },
+            { amount: 1, item: mi('antimony_ore'), probability: 0.20 },
+        ],
+        kj('quarry_quartz_ore'),
+        'below'
+    );
+
+    bronzeQuarry(
+        event,
+        'statech:bullshittium/bronze_quarry/redstone_vein',
+        4,
+        1200,
+        [{ amount: 1, item: kj('iron_drill'), probability: 0.04 }],
+        [
+            { amount: 1, item: mc('redstone_ore'), probability: 0.80 },
+            { amount: 1, item: mi('ruby_ore'), probability: 0.20 },
+        ],
+        kj('quarry_redstone_ore'),
+        'below'
+    );
+
+    bronzeQuarry(
+        event,
+        'statech:bullshittium/bronze_quarry/salt_vein',
+        4,
+        1200,
+        [{ amount: 1, item: kj('iron_drill'), probability: 0.04 }],
+        [
+            { amount: 1, item: mi('salt_ore'), probability: 1 },
+        ],
+        kj('quarry_salt_ore'),
+        'below'
+    );
+
+    bronzeQuarry(
+        event,
+        'statech:bullshittium/bronze_quarry/tin_vein',
+        4,
+        1200,
+        [{ amount: 1, item: kj('iron_drill'), probability: 0.04 }],
+        [
+            { amount: 1, item: mi('tin_ore'), probability: 1 },
+        ],
+        kj('quarry_tin_ore'),
+        'below'
+    );
+
+    bronzeQuarry(
+        event,
+        'statech:bullshittium/bronze_quarry/titanium_vein',
+        4,
+        1200,
+        [{ amount: 1, item: kj('iron_drill'), probability: 0.04 }],
+        [
+            { amount: 1, item: mi('titanium_ore'), probability: 0.80 },
+            { amount: 1, item: mi('tungsten_ore'), probability: 0.20 },
+        ],
+        kj('quarry_titanium_ore'),
+        'below'
+    );
+
+    bronzeQuarry(
+        event,
+        'statech:bullshittium/bronze_quarry/uranium_vein',
+        4,
+        1200,
+        [{ amount: 1, item: kj('iron_drill'), probability: 0.04 }],
+        [
+            { amount: 1, item: mi('uranium_ore'), probability: 0.90 },
+            { amount: 1, item: mi('iridium_ore'), probability: 0.05 },
+            { amount: 1, item: mi('monazite_ore'), probability: 0.05 },
+        ],
+        kj('quarry_uranium_ore'),
+        'below'
+    );
+
+    bronzeQuarry(
+        event,
+        'statech:bullshittium/bronze_quarry/zinc_vein',
+        4,
+        1200,
+        [{ amount: 1, item: kj('iron_drill'), probability: 0.04 }],
+        [
+            { amount: 1, item: cr('zinc_ore'), probability: 1 },
+        ],
+        kj('quarry_zinc_ore'),
+        'below'
+    );
+
+    // -- ITEM/FLUID LOGISTICS -- //
+
+    // -- MI PIPE REMOVALS -- //
+
+    event.remove({ id: mi('steam_age/item_pipe_asbl') })
+    event.remove({ id: mi('assembler_generated/steam_age/item_pipe') })
+    event.remove({ id: mi('steam_age/fluid_pipe_asbl') })
+    event.remove({ id: mi('assembler_generated/steam_age/fluid_pipe') })
+
+    // -- DYE RECIPE REMOVALS -- // this is stupid >:(
+
+    event.remove({ id: mi('dyes/white/craft/item_pipe_direct') })
+    event.remove({ id: mi('dyes/white/assembler/item_pipe_direct') })
+    event.remove({ id: mi('dyes/white/craft/fluid_pipe_stained_glass') })
+    event.remove({ id: mi('dyes/white/assembler/fluid_pipe_stained_glass') })
+
+    event.remove({ id: mi('dyes/light_gray/craft/item_pipe_direct') })
+    event.remove({ id: mi('dyes/light_gray/assembler/item_pipe_direct') })
+    event.remove({ id: mi('dyes/light_gray/craft/fluid_pipe_stained_glass') })
+    event.remove({ id: mi('dyes/light_gray/assembler/fluid_pipe_stained_glass') })
+
+    event.remove({ id: mi('dyes/gray/craft/item_pipe_direct') })
+    event.remove({ id: mi('dyes/gray/assembler/item_pipe_direct') })
+    event.remove({ id: mi('dyes/gray/craft/fluid_pipe_stained_glass') })
+    event.remove({ id: mi('dyes/gray/assembler/fluid_pipe_stained_glass') })
+
+    event.remove({ id: mi('dyes/black/craft/item_pipe_direct') })
+    event.remove({ id: mi('dyes/black/assembler/item_pipe_direct') })
+    event.remove({ id: mi('dyes/black/craft/fluid_pipe_stained_glass') })
+    event.remove({ id: mi('dyes/black/assembler/fluid_pipe_stained_glass') })
+
+    event.remove({ id: mi('dyes/brown/craft/item_pipe_direct') })
+    event.remove({ id: mi('dyes/brown/assembler/item_pipe_direct') })
+    event.remove({ id: mi('dyes/brown/craft/fluid_pipe_stained_glass') })
+    event.remove({ id: mi('dyes/brown/assembler/fluid_pipe_stained_glass') })
+
+    event.remove({ id: mi('dyes/red/craft/item_pipe_direct') })
+    event.remove({ id: mi('dyes/red/assembler/item_pipe_direct') })
+    event.remove({ id: mi('dyes/red/craft/fluid_pipe_stained_glass') })
+    event.remove({ id: mi('dyes/red/assembler/fluid_pipe_stained_glass') })
+
+    event.remove({ id: mi('dyes/redorange/craft/item_pipe_direct') })
+    event.remove({ id: mi('dyes/redorange/assembler/item_pipe_direct') })
+    event.remove({ id: mi('dyes/redorange/craft/fluid_pipe_stained_glass') })
+    event.remove({ id: mi('dyes/redorange/assembler/fluid_pipe_stained_glass') })
+
+    event.remove({ id: mi('dyes/yellow/craft/item_pipe_direct') })
+    event.remove({ id: mi('dyes/yellow/assembler/item_pipe_direct') })
+    event.remove({ id: mi('dyes/yellow/craft/fluid_pipe_stained_glass') })
+    event.remove({ id: mi('dyes/yellow/assembler/fluid_pipe_stained_glass') })
+
+    event.remove({ id: mi('dyes/lime/craft/item_pipe_direct') })
+    event.remove({ id: mi('dyes/lime/assembler/item_pipe_direct') })
+    event.remove({ id: mi('dyes/lime/craft/fluid_pipe_stained_glass') })
+    event.remove({ id: mi('dyes/lime/assembler/fluid_pipe_stained_glass') })
+
+    event.remove({ id: mi('dyes/green/craft/item_pipe_direct') })
+    event.remove({ id: mi('dyes/green/assembler/item_pipe_direct') })
+    event.remove({ id: mi('dyes/green/craft/fluid_pipe_stained_glass') })
+    event.remove({ id: mi('dyes/green/assembler/fluid_pipe_stained_glass') })
+
+    event.remove({ id: mi('dyes/cyan/craft/item_pipe_direct') })
+    event.remove({ id: mi('dyes/cyan/assembler/item_pipe_direct') })
+    event.remove({ id: mi('dyes/cyan/craft/fluid_pipe_stained_glass') })
+    event.remove({ id: mi('dyes/cyan/assembler/fluid_pipe_stained_glass') })
+
+    event.remove({ id: mi('dyes/light_blue/craft/item_pipe_direct') })
+    event.remove({ id: mi('dyes/light_blue/assembler/item_pipe_direct') })
+    event.remove({ id: mi('dyes/light_blue/craft/fluid_pipe_stained_glass') })
+    event.remove({ id: mi('dyes/light_blue/assembler/fluid_pipe_stained_glass') })
+
+    event.remove({ id: mi('dyes/blue/craft/item_pipe_direct') })
+    event.remove({ id: mi('dyes/blue/assembler/item_pipe_direct') })
+    event.remove({ id: mi('dyes/blue/craft/fluid_pipe_stained_glass') })
+    event.remove({ id: mi('dyes/blue/assembler/fluid_pipe_stained_glass') })
+
+    event.remove({ id: mi('dyes/purple/craft/item_pipe_direct') })
+    event.remove({ id: mi('dyes/purple/assembler/item_pipe_direct') })
+    event.remove({ id: mi('dyes/purple/craft/fluid_pipe_stained_glass') })
+    event.remove({ id: mi('dyes/purple/assembler/fluid_pipe_stained_glass') })
+
+    event.remove({ id: mi('dyes/magenta/craft/item_pipe_direct') })
+    event.remove({ id: mi('dyes/magenta/assembler/item_pipe_direct') })
+    event.remove({ id: mi('dyes/magenta/craft/fluid_pipe_stained_glass') })
+    event.remove({ id: mi('dyes/magenta/assembler/fluid_pipe_stained_glass') })
+
+    event.remove({ id: mi('dyes/pink/craft/item_pipe_direct') })
+    event.remove({ id: mi('dyes/pink/assembler/item_pipe_direct') })
+    event.remove({ id: mi('dyes/pink/craft/fluid_pipe_stained_glass') })
+    event.remove({ id: mi('dyes/pink/assembler/fluid_pipe_stained_glass') })
+
+    // -- RECIPE CHANGES -- //
+
+    event
+        .shaped('16x ' + 'moderndynamics:item_pipe', ['PPP', 'G G', 'PPP'], {
+            P: mi('bronze_plate'),
+            G: mi('steel_gear'),
+        })
+        .id('statech:moderndynamics/item_pipe');
+
+    event
+        .shaped('16x ' + 'moderndynamics:fluid_pipe', ['PPP', 'RGR', 'PPP'], {
+            P: mi('bronze_curved_plate'),
+            G: '#c:glass_panes',
+            R: mi('copper_rotor'),
+        })
+        .id('statech:moderndynamics/fluid_pipe');
+
+    assembler(
+        event,
+        st('bullshittium/moderndynamics/item_pipe'),
+        8,
+        200,
+        [
+            { amount: 6, item: mi('bronze_plate') },
+            { amount: 2, item: mi('steel_gear') },
+        ],
+        [{ amount: 16, item: 'moderndynamics:item_pipe' }]
+    );
+
+    assembler(
+        event,
+        st('bullshittium/moderndynamics/fluid_pipe'),
+        8,
+        200,
+        [
+            { amount: 6, item: mi('bronze_curved_plate') },
+            { amount: 2, item: mi('copper_rotor') },
+            { amount: 1, tag: 'c:glass_panes' },
+        ],
+        [{ amount: 16, item: 'moderndynamics:fluid_pipe' }]
+    );
+
+    assembler(
+        event,
+        st('bullshittium/item_pipe'),
+        8,
+        200,
+        [
+            { amount: 16, item: 'moderndynamics:item_pipe' },
+            { amount: 1, item: mi('electronic_circuit') },
+        ],
+        [{ amount: 16, item: mi('item_pipe') }]
+    );
+
+    assembler(
+        event,
+        st('bullshittium/fluid_pipe'),
+        8,
+        200,
+        [
+            { amount: 16, item: 'moderndynamics:fluid_pipe' },
+            { amount: 1, item: mi('electronic_circuit') },
+        ],
+        [{ amount: 16, item: mi('fluid_pipe') }]
+    );
+
+    // -- CIRCUIT CHANGES -- //
+
+    event
+        .shaped('1x ' + kj('bundle_of_analog_components'), ['RIR', 'C C', '   '], {
+            R: mi('resistor'),
+            I: mi('inductor'),
+            C: mi('capacitor'),
+        })
+        .id('statech:bundle_of_analog_components_shaped');
+
+    assembler(
+        event,
+        st('bundle_of_analog_components'),
+        8,
+        200,
+        [
+            { amount: 2, item: mi('resistor') },
+            { amount: 2, item: mi('capacitor') },
+            { amount: 1, item: mi('inductor') },
+        ],
+        [{ amount: 1, item: kj('bundle_of_analog_components') }]
+    );
+
+    event
+        .shaped('1x ' + mi('analog_circuit'), ['PAP', 'WBW', 'PWP'], {
+            P: cr('precision_mechanism'),
+            A: kj('bundle_of_analog_components'),
+            W: mi('copper_wire'),
+            B: mi('analog_circuit_board'),
+        })
+        .id('modern_industrialization:electric_age/circuit/craft/lv_circuit_asbl');
+
+    assembler(
+        event,
+        'modern_industrialization:assembler_generated/electric_age/circuit/craft/lv_circuit',
+        8,
+        200,
+        [
+            { amount: 4, item: cr('precision_mechanism') },
+            { amount: 1, item: kj('bundle_of_analog_components') },
+            { amount: 3, item: mi('copper_wire') },
+            { amount: 1, item: mi('analog_circuit_board') },
+        ],
+        [{ amount: 1, item: mi('analog_circuit') }]
+    );
+
+    event.recipes.create.sequenced_assembly(
+        [
+            CreateItem.of('create:precision_mechanism', .9),
+            CreateItem.of('create:cardboard', 0.02),
+            CreateItem.of('create:shaft', 0.02),
+            CreateItem.of('create:cogwheel', 0.02),
+            CreateItem.of('create:powdered_obsidian', 0.02),
+            CreateItem.of('create:rose_quartz', 0.01),
+            CreateItem.of('modern_industrialization:iron_dust', 0.01),
+        ],
+        'create:cardboard',
+        [
+            event.recipes.create.deploying('create:incomplete_precision_mechanism', ['create:incomplete_precision_mechanism', 'create:brass_sheet',]),
+            event.recipes.create.deploying('create:incomplete_precision_mechanism', ['create:incomplete_precision_mechanism', 'create:cogwheel',]),
+            event.recipes.create.deploying('create:incomplete_precision_mechanism', ['create:incomplete_precision_mechanism', 'create:large_cogwheel',]),
+            event.recipes.create.deploying('create:incomplete_precision_mechanism', ['create:incomplete_precision_mechanism', 'create:sturdy_sheet',]),
+            event.recipes.create.deploying('create:incomplete_precision_mechanism', ['create:incomplete_precision_mechanism', 'create:electron_tube',]),
+            event.recipes.create.pressing('create:incomplete_precision_mechanism', 'create:incomplete_precision_mechanism'),
+        ]
+    )
+    .transitionalItem('create:incomplete_precision_mechanism')
+    .loops(3)
+
 }) 
 
 // bullshittium stuff outside of this file:
@@ -1199,4 +1782,5 @@ ServerEvents.recipes(event => { // this probably isnt destructive
 ui stuff (handled by mode switcher)
 quantum armor wraps (handled by bullshittium_startup.js)
 everlasting beef/steak healing 0 hunger (also startup script)
+bronze quarry init stuff (startup)
 */

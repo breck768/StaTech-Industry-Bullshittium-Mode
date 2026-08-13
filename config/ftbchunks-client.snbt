@@ -138,34 +138,35 @@
 		# Default: true
 		entity_heads: true
 		entity_icon: {
-			"nomansland:deer": true
-			"minecraft:bat": true
-			"artifacts:mimic": true
+			"minecraft:wolf": true
+			"nomansland:goose": true
+			"minecraft:zombie": true
 			"minecraft:villager": true
-			"minecraft:cod": false
-			"minecraft:squid": true
-			"minecraft:cat": true
+			"minecraft:witch": true
+			"minecraft:sheep": true
+			"minecraft:zombie_villager": true
 			"minecraft:chicken": true
 			"minecraft:husk": true
-			"minecraft:enderman": true
-			"minecraft:horse": true
-			"minecraft:spider": true
-			"minecraft:polar_bear": true
-			"minecraft:zombie": true
-			"minecraft:pig": true
-			"minecraft:rabbit": true
-			"minecraft:cow": true
-			"minecraft:iron_golem": true
-			"minecraft:creeper": true
-			"minecraft:sheep": true
-			"nomansland:tortoise": true
-			"minecraft:witch": true
-			"nomansland:goose": true
-			"minecraft:glow_squid": true
 			"minecraft:skeleton": true
+			"minecraft:cow": true
 			"minecraft:dolphin": true
+			"nomansland:deer": true
 			"minecraft:fox": true
-			"minecraft:wolf": true
+			"minecraft:iron_golem": true
+			"minecraft:polar_bear": true
+			"minecraft:spider": true
+			"minecraft:rabbit": true
+			"minecraft:enderman": true
+			"minecraft:cat": true
+			"artifacts:mimic": true
+			"nomansland:tortoise": true
+			"minecraft:pig": true
+			"minecraft:cod": false
+			"minecraft:creeper": true
+			"minecraft:glow_squid": true
+			"minecraft:bat": true
+			"minecraft:squid": true
+			"minecraft:horse": true
 		}
 		
 		# Minimap font scaling (values not a multiple of 0.5 may look bad)
