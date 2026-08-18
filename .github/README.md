@@ -25,14 +25,16 @@ Bronze Quarry
 
 Modern Dynamics pipes now use MI pipe recipes, MI pipes are made with MD pipes + electronic circuits
 
-Precision Mechanism now requires substantial Create infrastructure to automate
-
-Analog circuits require 4 Precision Mechanisms along with normal requirements 
-
 Mob raids occur every 3 nights with buffed mob AI courtesy of a few mods
 > absolutely no clue how balanced or fun this is in either direction
 
 Void Dimension is inaccessible 
+
+Precision Mechanism now requires substantial Create infrastructure to automate
+
+Analog circuits require 4 Precision Mechanisms along with normal requirements 
+
+Pre-distillery method of getting polyethylene has been added, electronic circuit boards now require polyethylene
 
 # Priority List:
 bullshittium processing\
@@ -61,9 +63,6 @@ YAI fluid intake stuff if main doesn't do anything with it\
 iridium processing (also if main doesnt do anything with it)\
 
 ## circuit junk:
-silicon doping should be expanded\
-require polyethylene for electronic circuits (this is fucking evil)\
-not currently possible but a non distillery way of getting ethanol or some existing gt route could make it work\
 
 digital boards require ptfe\
 somehow making the logic gates require power grid (as in you literally have to make them with power grid components on the boards)\
