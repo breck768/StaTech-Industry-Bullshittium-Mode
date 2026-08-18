@@ -186,7 +186,7 @@ ServerEvents.recipes(event => { // this probably isnt destructive
             Item.of('modern_industrialization:clay_dust', 4),
             Fluid.of('minecraft:water', 100)
         ]
-    ).heated() // Heat requirement
+    ).heated()
 
     //without kubejs create
     // mixing(
@@ -1801,5 +1801,35 @@ ServerEvents.recipes(event => { // this probably isnt destructive
     )
     .transitionalItem('create:incomplete_precision_mechanism')
     .loops(3)
+
+    // -- EARLY GAME ETHYLENE -- //
+
+    event.recipes.create.mixing(
+        [Fluid.of('modern_industrialization:ethanol', 10)],
+        [
+            Fluid.of('modern_industrialization:sugar_solution', 1000)
+        ]
+    ).superheated()
+
+    event.recipes.create.mixing(
+        [
+            Fluid.of('modern_industrialization:ethylene', 500),
+            Fluid.of('modern_industrialization:sulfuric_acid', 400)
+        ],
+        [
+            Item.of('modern_industrialization:sulfur_dust', 1),
+            Fluid.of('modern_industrialization:ethanol', 1000)
+        ]
+    ).heated()
+
+    event.recipes.create.mixing(
+        [
+            Fluid.of('modern_industrialization:polyethylene', 300),
+        ],
+        [
+            Item.of('modern_industrialization:lead_tiny_dust', 4),
+            Fluid.of('modern_industrialization:ethylene', 500)
+        ]
+    ).heated()
 
 }) 
