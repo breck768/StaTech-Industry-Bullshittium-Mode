@@ -1735,6 +1735,33 @@ ServerEvents.recipes(event => { // this probably isnt destructive
 
     // -- CIRCUIT CHANGES -- //
 
+    // -- PRECISION MECHANISM -- //
+
+    event.recipes.create.sequenced_assembly(
+        [
+            CreateItem.of('create:precision_mechanism', .9),
+            CreateItem.of('create:cardboard', 0.02),
+            CreateItem.of('create:shaft', 0.02),
+            CreateItem.of('create:cogwheel', 0.02),
+            CreateItem.of('create:powdered_obsidian', 0.02),
+            CreateItem.of('create:rose_quartz', 0.01),
+            CreateItem.of('modern_industrialization:iron_dust', 0.01),
+        ],
+        'create:cardboard',
+        [
+            event.recipes.create.deploying('create:incomplete_precision_mechanism', ['create:incomplete_precision_mechanism', 'create:brass_sheet',]),
+            event.recipes.create.deploying('create:incomplete_precision_mechanism', ['create:incomplete_precision_mechanism', 'create:cogwheel',]),
+            event.recipes.create.deploying('create:incomplete_precision_mechanism', ['create:incomplete_precision_mechanism', 'create:large_cogwheel',]),
+            event.recipes.create.deploying('create:incomplete_precision_mechanism', ['create:incomplete_precision_mechanism', 'create:sturdy_sheet',]),
+            event.recipes.create.deploying('create:incomplete_precision_mechanism', ['create:incomplete_precision_mechanism', 'create:electron_tube',]),
+            event.recipes.create.pressing('create:incomplete_precision_mechanism', 'create:incomplete_precision_mechanism'),
+        ]
+    )
+        .transitionalItem('create:incomplete_precision_mechanism')
+        .loops(3)
+
+    // -- ANALOG CIRCUIT -- //
+
     event
         .shaped('1x ' + kj('bundle_of_analog_components'), ['RIR', 'C C', '   '], {
             R: mi('resistor'),
@@ -1779,28 +1806,25 @@ ServerEvents.recipes(event => { // this probably isnt destructive
         [{ amount: 1, item: mi('analog_circuit') }]
     );
 
-    event.recipes.create.sequenced_assembly(
+    // -- ELECTRONIC CIRCUIT -- //
+
+    event.remove({ id: 'modern_industrialization:electric_age/circuit/craft/electronic_circuit_board_asbl' })
+    assembler(
+        event,
+        'modern_industrialization:assembler_generated/electric_age/circuit/craft/electronic_circuit_board',
+        8,
+        200,
         [
-            CreateItem.of('create:precision_mechanism', .9),
-            CreateItem.of('create:cardboard', 0.02),
-            CreateItem.of('create:shaft', 0.02),
-            CreateItem.of('create:cogwheel', 0.02),
-            CreateItem.of('create:powdered_obsidian', 0.02),
-            CreateItem.of('create:rose_quartz', 0.01),
-            CreateItem.of('modern_industrialization:iron_dust', 0.01),
+            { amount: 3, item: mi('aluminum_plate') },
+            { amount: 4, item: mi('electrum_cable') },
+            { amount: 1, item: mi('analog_circuit_board') },
+            { amount: 1, item: mi('redstone_battery') },
         ],
-        'create:cardboard',
+        [{ amount: 1, item: mi('electronic_circuit_board') }],
         [
-            event.recipes.create.deploying('create:incomplete_precision_mechanism', ['create:incomplete_precision_mechanism', 'create:brass_sheet',]),
-            event.recipes.create.deploying('create:incomplete_precision_mechanism', ['create:incomplete_precision_mechanism', 'create:cogwheel',]),
-            event.recipes.create.deploying('create:incomplete_precision_mechanism', ['create:incomplete_precision_mechanism', 'create:large_cogwheel',]),
-            event.recipes.create.deploying('create:incomplete_precision_mechanism', ['create:incomplete_precision_mechanism', 'create:sturdy_sheet',]),
-            event.recipes.create.deploying('create:incomplete_precision_mechanism', ['create:incomplete_precision_mechanism', 'create:electron_tube',]),
-            event.recipes.create.pressing('create:incomplete_precision_mechanism', 'create:incomplete_precision_mechanism'),
-        ]
-    )
-    .transitionalItem('create:incomplete_precision_mechanism')
-    .loops(3)
+            { amount: 350, fluid: mi('polyethylene') },
+        ],
+    );
 
     // -- EARLY GAME ETHYLENE -- //
 
